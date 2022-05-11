@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "loginsysteem",
+    "slug": "loginsysteem",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ios.bundleIdentifier",
+      "config": {
+"googleSignIn": {
+  "reservedClientId": "com.googleusercontent.apps.548955576843-bf9f2tb9t8dbbmgpufbemkfuvkio5jgj"
+}}
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "android.package"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
