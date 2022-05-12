@@ -4,17 +4,20 @@ import { createStackNavigator } from "@react-navigation/stack";
 import LoginScreen from './Screens/LoginScreen';
 import HomeScreen from './Screens/HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
+import FacebooksSreen from './Screens/FacebooksSreen';
 
 const Stack = createStackNavigator();
 
-const App=()=> {
+const App = () => {
   return (
-  <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen options={{headerShown: false}} name="Login" component={LoginScreen} />
-      <Stack.Screen name="Home" component={HomeScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
+    <NavigationContainer>
+      <Stack.Navigator>
+
+        <Stack.Screen options={{ headerShown: false }} name="login" component={LoginScreen} />
+       <Stack.Screen options={{ headerShown: false }} name="Facebook" component={FacebooksSreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

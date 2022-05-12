@@ -27,15 +27,15 @@ const LoginScreen = () => {
 
 
 
-useEffect(() => {
-  const unsubscribe = auth.onAuthStateChanged(user => {
-    if (user) {
-      navigation.replace("Home")
-    }
-  })
+// useEffect(() => {
+//   const unsubscribe = auth.onAuthStateChanged(user => {
+//     if (user) {
+//       navigation.replace("Home")
+//     }
+//   })
 
-  return unsubscribe
-}, [])
+//   return unsubscribe
+// }, [])
 
 const handleSignUp = () => {
   auth
@@ -91,16 +91,23 @@ return (
       >
         <Text style={styles.buttonOutlineText}>Register</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Facebook")}
+        style={[styles.button, styles.buttonOutline]}
+      >
+        <Text style={styles.buttonOutlineText}>Facebook</Text>
+      </TouchableOpacity>
     </View>
   </KeyboardAvoidingView>
 )
 }
-//fyytyt
+
 export default LoginScreen
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 0,
     justifyContent: 'center',
     alignItems: 'center',
     
