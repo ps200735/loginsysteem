@@ -1,13 +1,16 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, ActivityIndicator } from 'react-native';
 import * as Facebook from 'expo-facebook'
-
+import { useNavigation } from '@react-navigation/core';
  const App =()=> {
+  const navigation = useNavigation()
 
   const [isLoggedin, SetLoggedinStatus] = useState(false);
   const [userData, setUserData] = useState(null);
   const [isImageLoading, SetImageLoadStatus] = useState(false);
-
+ const  annuleren =()=> {
+  navigation.navigate("login");
+ }
   const FacebookLogIn = async () => {
     try {   
       await Facebook.initializeAsync({
@@ -70,6 +73,12 @@ import * as Facebook from 'expo-facebook'
         <TouchableOpacity style={styles.loginBtn} onPress={FacebookLogIn}>
           <Text style= {{color: '#fff'}}>
             Login With Facebook
+          </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.loginBtn} onPress={annuleren}>
+          <Text style= {{color: '#fff'}}>
+          annuleren
           </Text>
         </TouchableOpacity>
       </View>
