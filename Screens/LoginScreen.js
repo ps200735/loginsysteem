@@ -53,6 +53,8 @@ const handleLogin = () => {
     .then(userCredentials => {
       const user = userCredentials.user;
       console.log('Logged in with:', user.email);
+      navigation.replace("Home")
+
     })
     .catch(error => alert(error.message))
 }
@@ -107,7 +109,7 @@ export default LoginScreen
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
+    flex: 2,
     justifyContent: 'center',
     alignItems: 'center',
     
